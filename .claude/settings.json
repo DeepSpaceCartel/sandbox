@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make help)",
+      "Bash(make env-list:*)",
+      "Bash(make env-up:*)",
+      "Bash(make deploy:*)",
+      "Bash(make e2e:*)",
+      "Bash(go build:*)",
+      "Bash(go test:*)",
+      "Bash(go vet:*)",
+      "Bash(terraform fmt:*)",
+      "Bash(terraform validate:*)",
+      "Bash(terraform plan:*)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "Bash(kubectl logs:*)",
+      "Bash(kubectl config current-context)",
+      "Bash(helm list:*)",
+      "Bash(helm template:*)",
+      "Bash(helm lint:*)"
+    ],
+    "ask": [
+      "Bash(make env-down:*)",
+      "Bash(terraform apply:*)",
+      "Bash(terraform destroy:*)",
+      "Bash(talosctl reset:*)"
+    ],
+    "deny": [
+      "Bash(op read:*)",
+      "Bash(op item get:*)"
+    ]
+  }
+}

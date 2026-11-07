@@ -1,0 +1,31 @@
+{
+  "name": "sandbox",
+  "image": "mcr.microsoft.com/devcontainers/base:trixie",
+  "hostRequirements": { "cpus": 4, "memory": "8gb", "storage": "32gb" },
+  "features": {
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" },
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": { "minikube": "none" },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+  "remoteUser": "vscode",
+  "containerEnv": {
+    "TZ": "Europe/Berlin"
+  },
+  "postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "hashicorp.terraform",
+        "redhat.vscode-yaml",
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "Anthropic.claude-code",
+        "coder.coder-remote",
+        "deepspacecartel.devcontainer-builder"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+
+# Cluster client configs written by infra/cluster
+kubeconfig*
+talosconfig*
+
+# Secrets that must never be committed
+*.pem
+*.key
+.env
+!.env.1password
+
+# Build output
+bin/
+dist/
+node_modules/
+coverage/
+.cache/
